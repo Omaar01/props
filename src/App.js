@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import React from 'react'
+import Profil from './Profil'
+const App = () => {
+  function handleName (name){
+    console.log('hiiiii');
+    alert(name)
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    <div>
+      <Profil name={'omar'} bio={'age 28 ans bac+5'} professions={'sales'} handleName={handleName}>
+      <img onClick={() => handleName("omar")} src="https://www.euractiv.fr/wp-content/uploads/sites/3/2020/11/shutterstock_702626722-800x450.jpg" height={80} alt="" />
+      </Profil>
+      
+        </div>
+  )
 }
 
-export default App;
+export default App
